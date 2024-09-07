@@ -15,7 +15,7 @@ def input_movie_year():
                 raise ValueError
             break
         except:
-            print("Try again")
+            print("Please Try again")
     return movie_year
 
 
