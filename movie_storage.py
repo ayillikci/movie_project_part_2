@@ -107,4 +107,20 @@ def update_movie(title, rating):
     movies[title] ["rating"] = rating
     save_movies(movies)
     return f"The movie {title} has been modified"
+def average_movie_rating():
+    """ Sum all ratings and divide it to the number of movies. If there is 0 movies then display a message to user  " there is no movie
+    the db"""
+    movies = load_movies()
+    movie_total = 0
+    num = len(movies)
+    if num != 0:
+        for movie in movies.values():
+            movie_total += float(movie["rating"])
+    else:
+        print("There is no movie in the database")
+    rating_avg = movie_total / num
+    print(f"the average rating of moives in the database is: {rating_avg}")
 
+
+
+average_movie_rating()
