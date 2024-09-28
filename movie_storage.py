@@ -123,4 +123,4 @@ def average_movie_rating():
 
 
 
-average_movie_rating()
+"""average_movie_rating()"""
